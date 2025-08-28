@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポートフォリオ - 清水 璃音</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* 基本 */
+    body {
+      margin: 0;
+      font-family: 'Roboto', 'Poppins', sans-serif;
+      background-color: #F3F4F6;
+      color: #1E3A8A;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      margin: 0.5em 0;
+    }
+
+    /* ヘッダー（背景固定＋スクロールで文字動く） */
+    header {
+      height: 100vh;
+      min-height: 400px;
+      background-image: url('https://msp.c.yimg.jp/images/v2/FUTi93tXq405grZVGgDqG7EIKdbFAqpt1vBhNTk_7iZYCNG3xLLRw-HsEzH5UPxd8RY-1blgMRvotiI0yw05QVlJDvLhr2gkt00oVDOT-3FLCHTQouL35Blv0kKmDRKA9MEIAd45gOU6XeutGSoNrezPMJtkQ1PNr5iBTdT7-EWdL2mSgPCo3ZxDpojmMZfxEccT7D6bYN7IbIeKTLK5mCKtdCaYeV6-srG2Upxa9Xvb-xjATttKEvHazoUL7Ovp4aMPFUPpnhTLhkMQyYj8OQKBQ5c__QcRSxxV0HEo5LCEIwwBFPXRcHYaVPvfo0OQ/360_F_1343839939_VPwCLPpnBsQH995OpqqF8FCN7y8Fftk1.jpg?errorImage=false');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* 背景だけ固定 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-content h1 {
+      font-size: 3em;
+      font-weight: 700;
+    }
+
+    .header-content p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #3B82F6;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .btn-primary:hover {
+      background-color: #2563EB;
+      transform: translateY(-2px);
+    }
+
+    /* main */
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* セクション */
+    section {
+      margin-bottom: 50px;
+    }
+
+    section h2 {
+      font-size: 2em;
+      color: #1E3A8A;
+      margin-bottom: 20px;
+    }
+
+    /* カード */
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      flex: 1 1 250px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .tall-card {
+      height: 1050px; 
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 18px;
+      background-color: #3B82F6;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .btn-secondary:hover {
+      background-color: #2563EB;
+      transform: translateY(-1px);
+    }
+
+    
+
+    /* レスポンシブ */
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+      }
+
+      .header-content h1 {
+        font-size: 2em;
+      }
+      .header-content p {
+        font-size: 1em;
+      }
+    }
+<style>
+.portfolio-item {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.portfolio-item h2 {
+  font-size: 1.8em;
+  color: #007acc;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007acc;
+  padding-bottom: 5px;
+}
+
+.section-title {
+  font-weight: bold;
+  color: #005fa3;
+  font-size: 1.1em;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+.section-content {
+  margin-left: 15px;
+  margin-bottom: 12px;
+}
+
+ul {
+  margin-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+img {
+  display:block;
+}
+</style>
+
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-content">
+      <h1>portfolio</h1>
+      <p>清水璃音</p>
+      <a href="#about" class="btn-primary">Learn More ↓</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Me -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>2024年3月 山口大学農学部生物機能科学科中退<br>2024年11月 興洋産業株式会社入社</p>
+    </section>
+
+    <!-- Skills / Strength -->
+    <section id="skills">
+      <h2>My Strengths</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>好奇心旺盛</h3>
+          <p>新しいことに積極的に挑戦できます。<br>興味を持ったことは突き詰めるタイプで、楽曲制作や簡単なゲーム制作も行っています。</p>
+        </div>
+        <div class="card">
+          <h3>学習意欲</h3>
+          <p>技術を自主的に学び、即実践に活かします。未経験ではありますが、持ち前の学習意欲の高さで積極的に課題に取り組む力があります。</p>
+        </div>
+        <div class="card">
+          <h3>粘り強さ</h3>
+          <p>難しい課題も最後までやり抜きます。エラーに苦しめられることの方が多いですが、持ち前の粘り強さで正しく動くまでやり遂げます。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Works -->
+<section id="works">
+  <h2>Works</h2>
+  <div class="cards">
+    <div class="card">
+  <h2>請求書自動生成・帳票管理システム（Excel VBA）</h2>
+  
+  <!-- 概要 -->
+  <div class="section-title">概要</div>
+  <div class="section-content">
+    <p>取引先ごとの請求CSVデータを基に、複数ページの請求書を自動生成し、取引先・明細コード単位でファイル分割・集計・帳票成形まで行うExcel VBAシステムを開発。</p>
+    <!-- 処理フロー図 -->
+    <img src="スクリーンショット 2025-08-28 173545.png" alt="処理フロー図" style="width:80%; margin-top:10px; display:block;">
+  </div>
+  
+  <!-- 背景 / 課題 -->
+  <div class="section-title">背景 / 課題</div>
+  <div class="section-content">
+    <ul>
+      <li>従来の請求書作成はコストがかかっていたため、費用をなるべく削減するためにExcelでの請求書作成をVBAで自動化し、複数ページ・複雑な明細構造にも対応できる効率的なシステムを開発した。</li>
+      <li>複雑な帳票ルールに対応する既存システムがなく、効率化が求められていた</li>
+    </ul>
+  </div>
+  
+  <!-- 担当 / 役割 -->
+  <div class="section-title">担当 / 役割</div>
+  <div class="section-content">
+    <ul>
+      <li>システム設計からVBA実装、テストまでを担当</li>
+      <li>複雑な帳票ルールの要件整理、仕様策定</li>
+      <li>CSVデータの読み込み・整形・ページ単位の出力ロジックを設計</li>
+    </ul>
+  </div>
+  
+  <!-- 技術的工夫 / 難易度ポイント -->
+  <div class="section-title">技術的工夫 / 難易度ポイント</div>
+  <div class="section-content" style="display:flex; gap:20px; align-items:flex-start;">
+    <ul style="flex:1;">
+      <li>動的にページ分割・明細グループ化を実装し、可変明細数に対応</li>
+      <li>取引先単位で消費税最大値を計算し、明細と集計の二重整合性を確保</li>
+      <li>明細コード順・作業帯順のソートや小数・整数分解表示など、帳票フォーマットを精緻に制御</li>
+      <li>エラー処理と例外対応を組み込み、現場での安定運用を実現</li>
+      <li>VBAとExcel標準機能（印刷範囲、シートコピー、セル書式制御）を組み合わせた効率化</li>
+    </ul>
+    <!-- 帳票サンプル画像 -->
+    <img src="スクリーンショット 2025-08-28 175338.png" alt="帳票サンプル" style="flex:1; max-width:300px; border:1px solid #ccc;">
+  </div>
+  
+  <!-- 成果 / 効果 -->
+  <div class="section-title">成果 / 効果</div>
+  <div class="section-content" style="display:flex; gap:20px; align-items:flex-start;">
+    <ul style="flex:1;">
+      <li>請求書作成作業時間を短縮</li>
+      <li>導入後すぐに現場運用可能な安定性を確保</li>
+
+    </ul>
+  </div>
+</div>
+</section>
+
+    <!-- End -->
+<section id="end">
+  <h2>Lastly</h2>
+  <div class="cards">
+    <div class="card">
+          <p>私は、新しい知識を吸収し、自らの力で成果につなげる学習意欲の高さを強みとしています。<br>業務で必要となった請求書作成業務の効率化において、独学でExcelマクロを学習し、 VBA を用いた自動化ツールを開発しました。当初はプログラミングに関して全くの初心者でしたが、必要な知識を一から調べ、試行錯誤を重ねながら課題を一つずつ解決することで、最終的に実務で活用できるレベルの成果物を完成させることができました。<br>この経験を通じて、未知の分野に対しても前向きに学び取り組む姿勢、そして困難な課題に対して諦めず挑戦し続ける粘り強さを培うことができました。現在は Java の学習を進めており、オブジェクト指向の考え方に苦戦しながらも理解を深める努力を続けています。難しさを感じる部分こそ自分の成長の機会と捉え、継続的な学習を通じて確実に力をつけていきたいと考えております。<br>将来的にはアプリ開発に携わり、ユーザーにとって便利で使いやすいシステムを提供できるエンジニアを目指しています。また、単に作って終わりではなく、今後何十年先にも使い続けられるような保守性・拡張性を意識し、未来の開発者や保守担当者にとっても分かりやすい設計やコードを残せる“真に 信頼されるプログラマー”へ成長していきたいと考えております。</p>
+        </div>
+
+  </section>
+
+
+
+</body>
+</html>
